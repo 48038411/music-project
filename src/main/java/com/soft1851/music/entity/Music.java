@@ -5,25 +5,24 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Timestamp;
-
 /**
- * 描述:
- *
- * @author：Guorc
- * @create 2020-04-02 10:19
- */
+ * @ClassName Music
+ * @Description TODO
+ * @Author wangqingyuan
+ * @Date 2020/4/2 &10:50
+ * @Version 1.0
+ **/
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class Music {
-    private int musicId;
-    private String musicName;
-    private String musicAuthor;
-    private String musicSrc;
-    private String musicImg;
-    private int musicCount;
-    private String musicType;
-    private String musicTimestamp;
+    private int id;
+    private String name;
+    private String author;
+    private String src;
+    private String img;
+    private int count;
+    private String type;
+    private String update_time;
 }

@@ -1,4 +1,5 @@
 package com.soft1851.music.spider;
+
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.soft1851.music.entity.Music;
@@ -56,18 +57,18 @@ public class MusicSpider {
 //            System.out.println(jsonObject);
 
             JSONArray list = jsonObject.getJSONObject("data").getJSONArray("data");
-            System.out.println(list);
+
             list.forEach(o ->{
                 JSONObject json = JSONObject.parseObject(o.toString());
                 Music music = Music.builder()
-                        .musicId(json.getInteger("id"))
-                        .musicName(json.getString("title"))
-                        .musicAuthor((json.getString("author")))
-                        .musicSrc(json.getString("cid")) //歌曲链接
-                        .musicImg(json.getString("cover"))
-                        .musicCount(json.getInteger("play"))//播放次数
-                        .musicType(json.getString("duration"))//歌曲类别
-                        .musicTimestamp(json.getString("passtime"))//上架时间
+                        .id(json.getInteger("id"))
+                        .name(json.getString("title"))
+                        .author((json.getString("author")))
+                        .src(json.getString("cid")) //歌曲链接
+                        .img(json.getString("cover"))
+                        .count(json.getInteger("duration"))//播放次数
+                        .type(json.getString("duration"))//歌曲类别
+                        .update_time(json.getString("duration"))//上架时间
                         .build();
                 musics.add(music);
             });
