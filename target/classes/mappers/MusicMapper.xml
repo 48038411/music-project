@@ -2,7 +2,17 @@
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.soft1851.music.mapper.MusicMapper">
-    <select id="selectAll" resultType="com.soft1851.music.entity.Music">
+    <resultMap id="musicMap" type="map">
+        <result property="musicId" column="id"/>
+        <result property="musicName" column="name"/>
+        <result property="musicAuthor" column="author"/>
+        <result property="musicSrc" column="src"/>
+        <result property="musicImg" column="img"/>
+        <result property="musicCount" column="count"/>
+        <result property="musicType" column="type"/>
+        <result property="musicTimeStamp" column="update_time"/>
+    </resultMap>
+    <select id="selectAll" resultMap="musicMap">
         SELECT *
         FROM music
     </select>

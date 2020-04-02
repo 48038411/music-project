@@ -20,6 +20,6 @@ public class MusicMapperTest {
     @Test
     public void selectAll() {
         List<Music> music = musicMapper.selectAll();
-        music.forEach(music1 -> System.out.println(music1));
+        System.out.println(music);
     }
 }

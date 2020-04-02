@@ -15,7 +15,7 @@
     <!--类型命名-->
     <typeAliases>
         <typeAlias type="com.soft1851.music.entity.Music" alias="Music"/>
-<!--        <typeAlias type="com.soft1851.spring.mybatis.entity.Teacher" alias="Teacher"/>-->
+        <typeAlias type="com.soft1851.music.entity.User" alias="User"/>
 <!--        <typeAlias type="com.soft1851.spring.mybatis.entity.Clazz" alias="Clazz"/>-->
 <!--        <typeAlias type="com.soft1851.spring.mybatis.entity.Student" alias="Student"/>-->
 <!--        <typeAlias type="com.soft1851.spring.mybatis.entity.Course" alias="Course"/>-->

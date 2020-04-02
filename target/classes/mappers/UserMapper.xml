@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.soft1851.music.mapper.UserMapper">
+    <!--  根据用户名查询  -->
+    <select id="findByUserName" resultType="User" parameterType="User">
+        SELECT * FROM t_user WHERE name = #{name}
+    </select>
+
+    <!-- 新增用户   -->
+    <insert id="addUser" parameterType="User">
+        INSERT INTO
+            t_user(id, name, password, salt, email, phone_number, status, binding, credits, create_time, last_login_time)
+            VALUES (#{id},#{name},#{password},#{email},#{phoneNumber},#{status},#{binding},#{credits},#{createTime},
+                    #{lastLoginTime})
+    </insert>
+</mapper>
