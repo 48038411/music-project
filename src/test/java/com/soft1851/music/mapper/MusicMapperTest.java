@@ -1,6 +1,7 @@
 package com.soft1851.music.mapper;
 
 import com.soft1851.music.entity.Music;
+import com.soft1851.music.spider.MusicSpider;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -19,5 +20,10 @@ public class MusicMapperTest {
     public void selectAll() {
         List<Music> music = musicMapper.selectAll();
         System.out.println(music);
+    }
+
+    @Test
+    public void batchInsert() {
+        musicMapper.batchInsert(MusicSpider.getMusics());
     }
 }

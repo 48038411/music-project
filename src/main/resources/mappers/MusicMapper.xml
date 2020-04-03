@@ -16,4 +16,10 @@
         SELECT *
         FROM music
     </select>
+    <insert id="batchInsert" parameterType="com.soft1851.music.entity.Music">
+        INSERT INTO music VALUES
+        <foreach collection="musics" item="item" index="index" separator=",">
+            (#{item.id},#{item.name},#{item.author},#{item.src},#{item.img},#{item.count},#{item.type},#{item.update_time})
+        </foreach>
+    </insert>
 </mapper>
