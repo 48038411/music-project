@@ -16,4 +16,11 @@ public interface UserMapper {
      * @return
      */
     User findByUserName(String name);
+
+    /**
+     * 根据user的id查询音乐
+     * @param id
+     * @return
+     */
+    User getMusicById(int id);
 }

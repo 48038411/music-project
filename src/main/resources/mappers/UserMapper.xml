@@ -14,4 +14,27 @@
             VALUES (#{id},#{name},#{password},#{salt},#{email},#{phoneNumber},#{status},#{binding},#{credits},#{createTime},
                     #{lastLoginTime})
     </insert>
+    
+    <resultMap id="userMap" type="User">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <collection property="musics" ofType="Music">
+            <id column="id" property="id"/>
+            <result column="name" property="name"/>
+            <result column="author" property="author"/>
+            <result column="img" property="img" />
+        </collection>
+    </resultMap>
+    <select id="getMusicById" parameterType="int" resultMap="userMap">
+        SELECT u.id,
+               u.name,
+               m.id,
+               m.name,
+               m.author,
+               m.img
+        FROM t_user u
+                LEFT JOIN t_user_music um ON u.id = um.user_id
+                LEFT JOIN music m ON um.music_id= m.id
+        WHERE um.user_id=#{id}
+    </select>
 </mapper>

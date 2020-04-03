@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * @ClassName Music
  * @Description TODO
@@ -25,4 +27,5 @@ public class Music {
     private int count;
     private String type;
     private String update_time;
+    private List<User> users;
 }
