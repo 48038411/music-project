@@ -19,4 +19,10 @@ public interface MusicService {
      * @return int[]
      */
     int bathInsert(List<Music> musics);
+
+    /**
+     * 查询所有音乐
+     * @return
+     */
+    List<Music> selectAll();
 }

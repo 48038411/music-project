@@ -28,4 +28,9 @@ public class MusicServiceImpl implements MusicService {
     public int bathInsert(List<Music> musics) {
         return musicMapper.batchInsert(musics);
     }
+
+    @Override
+    public List<Music> selectAll() {
+        return musicMapper.selectAll();
+    }
 }
