@@ -3,6 +3,7 @@ package com.soft1851.music.service.impl;
 
 import com.soft1851.music.dao.MusicDao;
 import com.soft1851.music.entity.Music;
+import com.soft1851.music.mapper.MusicMapper;
 import com.soft1851.music.service.MusicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,10 +22,10 @@ import java.util.List;
 @Transactional(rollbackFor = Exception.class)
 public class MusicServiceImpl implements MusicService {
     @Autowired
-    private MusicDao musicDao;
+    private MusicMapper musicMapper;
 
     @Override
-    public int[] bathInsert(List<Music> musics) {
-        return musicDao.batchInsert(musics);
+    public int bathInsert(List<Music> musics) {
+        return musicMapper.batchInsert(musics);
     }
 }

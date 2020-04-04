@@ -18,5 +18,5 @@ public interface MusicService {
      * @param musics
      * @return int[]
      */
-    int[] bathInsert(List<Music> musics);
+    int bathInsert(List<Music> musics);
 }

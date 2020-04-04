@@ -16,6 +16,7 @@
     <typeAliases>
         <typeAlias type="com.soft1851.music.entity.Music" alias="Music"/>
         <typeAlias type="com.soft1851.music.entity.User" alias="User"/>
+        <typeAlias type="com.soft1851.music.entity.UserMusic" alias="UserMusic"/>
 <!--        <typeAlias type="com.soft1851.spring.mybatis.entity.Clazz" alias="Clazz"/>-->
 <!--        <typeAlias type="com.soft1851.spring.mybatis.entity.Student" alias="Student"/>-->
 <!--        <typeAlias type="com.soft1851.spring.mybatis.entity.Course" alias="Course"/>-->
